@@ -13,8 +13,8 @@ export const NavBar = ()=>{
                 </div>
                 <div className="navbar-auth">
                     <div className="navbar-auth-link">
-                        <Link to="/auth">ShopHub</Link>
-                        <Link to="/auth">ShopHub</Link>
+                        <Link to="/auth" className="btn btn-secondary">Login</Link>
+                        <Link to="/auth" className="btn btn-primary">Sign up</Link>
                     </div>
                 </div>
 
