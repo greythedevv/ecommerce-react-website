@@ -1,15 +1,14 @@
 import { Link } from "react-router-dom"
-
 export const NavBar = ()=>{
 
 
     return(
         <nav className="navbar">
             <div className="navbar-container">
-                <Link to="/">ShopHub</Link>
+                <Link to="/" className="navbar-brand">ShopHub</Link>
                 <div className="navbar-links">
-                    <Link to="/">Home</Link>
-                    <Link to="/checkout">Checkout</Link>
+                    <Link to="/" className="navbar-link">Home</Link>
+                    <Link to="/checkout" className="navbar-link">Checkout</Link>
                 </div>
                 <div className="navbar-auth">
                     <div className="navbar-auth-link">
