@@ -49,6 +49,8 @@ function getCartToal(){
 
     return total
 }
+
+function
     
 return <CartContext.Provider value={{cartItems, addToCart, getCartItemsWithProducts, removeFromCart, updateQuantity, getCartToal}}>{children}</CartContext.Provider>
 }
