@@ -5,6 +5,7 @@ import { Auth } from './Pages/Auth'
 import { Checkout } from './Pages/checkout'
 import { NavBar } from './components/navBar'
 import { AuthProvider } from './context/authcontext'
+import { Products } from './Pages/ProductsDetails'
 
 
 
@@ -21,6 +22,7 @@ function App() {
         <Route path='/' element={<Home/>}/>
         <Route path='/auth' element={<Auth/>}/>
         <Route path='/checkout' element={<Checkout/>}/>
+        <Route path='/products/:' element={<Products/>}/>
       </Routes>
     </div>
     </AuthProvider>

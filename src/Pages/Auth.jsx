@@ -1,12 +1,12 @@
 import { useContext, useState } from "react"
 import { useForm } from "react-hook-form"
-import {AuthContext} from "../context/authcontext"
+import {useAuth} from "../context/authcontext"
 import { useNavigate } from "react-router-dom"
 
 export const Auth = ()=>{
     const[mode, setMode] = useState("signup")
     const[error, setError]= useState(null)
-    const {signUp, user, login} = useContext (AuthContext)
+    const {signUp, user, login} = useAuth()
     const {register, handleSubmit, formState:{errors}} = useForm()
     const navigate = useNavigate()
 

@@ -1,4 +1,4 @@
-import { createContext, useState } from "react"
+import { createContext, useContext, useState } from "react"
 
 export const AuthContext = createContext(null)
 
@@ -11,7 +11,7 @@ const users = JSON.parse(localStorage.getItem("user")|| "[]")
 
 
 if(users.find(u =>u.email === email)){
-    return{sucess: false, error: "Email already exists"}
+    return{success: false, error: "Email already exists"}
 }
 
 const newUser = {email, password}
@@ -43,5 +43,11 @@ function logout(){
 }
 
     
-return <AuthContext.Provider value={{signUp, user, login}}>{children}</AuthContext.Provider>
+return <AuthContext.Provider value={{signUp, user, login, logout}}>{children}</AuthContext.Provider>
+}
+
+export function useAuth(){
+    const context = useContext(AuthContext)
+
+    return context;
 }
