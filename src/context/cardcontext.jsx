@@ -50,9 +50,11 @@ function getCartToal(){
     return total
 }
 
-function
+function  clearCart(){
+    setCartItems([])
+}
     
-return <CartContext.Provider value={{cartItems, addToCart, getCartItemsWithProducts, removeFromCart, updateQuantity, getCartToal}}>{children}</CartContext.Provider>
+return <CartContext.Provider value={{cartItems, addToCart, getCartItemsWithProducts, removeFromCart, updateQuantity, getCartToal, clearCart}}>{children}</CartContext.Provider>
 }
 
 export function useCart(){
